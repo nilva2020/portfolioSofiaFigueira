@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserat:wght@500&family=Work+Sans&display-swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+            /*raiz da arvore elemento*/
+:root{
+   --font:'Montserrat', sans-serif;
+   --prime-font: 'Work Sans', sans-serif;
+   --bg: rgb(1,1,1);
+   --main-color: rgb(243, 10, 10);
+   --main-font-color:rgb(253, 251, 251);
+   --sec-font-color: rgba(252, 241, 241, 0.706);
+}
+            /*corpo*/
+body{
+    background: var(--bg);
+    font-family: var(--font);
+    color: var(--main-font-color);
+    overflow-x: hidden;
+}
+      /*alinhar elementos do nav*/
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /*navbar*/
+.nav{
+    width: 85%;
+    height: 70px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.logo{
+  border: 1px solid rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  top: 10px;
+}
+.logo img{
+  width: 80px;
+  height: 80px;
+  object-fit: scale-down; /*a imagem será adaptada à sua menor versão entre os resultados de none ou contain*/
+}  
+.nav ol{
+    list-style: none;
+}
+.nav ol a{
+    text-decoration: center;
+    color: var(--sec-font-color);
+    margin: 0.3em;
+    padding:0.5em 1.5em;
+    border-radius: 10px;
+}
+.nav ol a:hover{
+    transition: background .8s;
+    background: var(--main-color);
+}
+.main{
+    width: 85%;
+    height: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.main::before, .main::after{
+    content: '';
+    width: 80%;
+    height: 70%;
+    background: rgb(21, 22, 24);
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    z-index: -10;
+}
+.main::after{
+    background: rgba(21, 22, 25, 0.522);
+    height: 60%;
+    top: 20px;
+    left: -40%;
+    border-top: 1px solid rgb(200, 30, 24);
+    border-right: 1px solid #4985c9;
+    z-index: -11;
+}
+.box h1{
+    font-size: 6.seg;
+    margin-bottom: 0.2em;
+}
+.box p{
+    font-size: 1.2em;
+    color: var(--sec-font-color);
+    margin-bottom: 1.2em;
+}
+
+.main img {
+    width: 30em; /*largura*/
+    position: absolute;
+    right: 50px; /*direita*/
+    z-index: -1;
+}
